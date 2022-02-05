@@ -1,0 +1,60 @@
+
+#number 1
+# BankAccount class
+class Bank_Account:
+    def __init__(self):
+        self.balance=0
+        print("Hello! Welcome to the ATM Machine")
+        name = input("Enter your name: ")
+        print( "Hello", name + "!")
+# Function to deposit amount
+    def deposit(self):
+        amount= float(input("Enter amount to be Deposited: "))
+        self.balance += amount
+        print("\n Amount Deposited:", amount)
+# Function to withdraw amount
+    def withdraw(self):
+        amount = float(input("Enter amount to be Withdrawn: "))
+        if self.balance >= amount:
+            self.balance -= amount
+            print("\n You Withdrew: ", amount)
+        else:
+            print("\n Insufficient Balance ")
+
+# Function to display amount
+    def display(self):
+        print("\n Net Available Balance =", self.balance)
+
+## Test loop
+        while True:
+            choice = int(input('''
+        Please choose an option from the following:
+        1 - Withdraw
+        2 - Deposit
+        3 - Check Balance
+        4 - Exit:  '''))
+
+
+            if choice == 1:
+                s.withdraw()
+            elif choice == 2:
+                s.deposit()
+            elif choice == 3:
+                s.display()
+
+
+            more = input("Would you like another transaction? (y/n)")
+            if more.lower() != 'y':
+                print("Goodbye")
+                break
+#Driver code
+
+
+# object of class
+s = Bank_Account()
+
+# calling functions
+
+s.deposit()
+s.withdraw()
+s.display()
